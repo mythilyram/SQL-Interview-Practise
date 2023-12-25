@@ -1,5 +1,6 @@
+--Leet Code - Top SQL 50
 --1757. https://leetcode.com/problems/recyclable-and-low-fat-products/description/?envType=study-plan-v2&envId=top-sql-50
---Write a solution to find the ids of products that are both low fat and recyclable.
+--Write a solution to find the IDs of products that are both low-fat and recyclable.
 SELECT
     product_id
 FROM Products
@@ -26,7 +27,7 @@ WHERE area >= 3000000 OR
     population >= 25000000
 
 -- 1148. https://leetcode.com/problems/article-views-i/description/?envType=study-plan-v2&envId=top-sql-50
--- Write a solution to find all the authors that viewed at least one of their own articles. Return the result table sorted by id in ascending order.
+-- Write a solution to find all the authors who viewed at least one of their articles. Return the result table sorted by id in ascending order.
 SELECT
     DISTINCT(au.author_id) AS id
 FROM Views au
@@ -84,7 +85,7 @@ SELECT
     FROM Weather t1
     JOIN Weather t2    
     ON DATE_ADD(t1.recordDate,INTERVAL 1 DAY) = t2.recordDate
-    /* Use date add function, condider the whole date to get the next date.*/
+    /* Use the date add function, consider the whole date to get the next date.*/
     WHERE t2.temperature > t1.temperature
 -- https://www.linkedin.com/posts/mythilyramanathan_day-4-activity-7144657978044936192-8_-_?utm_source=share&utm_medium=member_desktop
 
@@ -102,7 +103,7 @@ WHERE A1.machine_id = A2.machine_id AND
 GROUP BY A1.machine_id
 
 -- 577. https://leetcode.com/problems/employee-bonus/?envType=study-plan-v2&envId=top-sql-50
--- Write a solution to report the name and bonus amount of each employee with a bonus less than 1000.
+-- Write a solution to report the name and bonus amount of each employee with a bonus of less than 1000.
 SELECT
     E.name,
     B.bonus
