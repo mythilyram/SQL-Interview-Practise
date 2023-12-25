@@ -1,0 +1,8 @@
+The order of execution in SQL is 
+FROM - WHERE - SELECT - GROUP BY - ORDER BY - LIMIT.
+
+I`m using only the first 3 in this query.
+
+The calculations that takes place in SELECT in step 3 are not available in WHERE which is step 2.
+I need to specify them again in WHERE condition.
+For this same reason, I have to find the Max again in Where condition using a sub-query.
