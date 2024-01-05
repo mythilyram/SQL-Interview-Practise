@@ -21,16 +21,17 @@ Day 6: Leetcode - Top SQL 50 [Students-and-examinations](https://www.linkedin.co
 - Cross join, Left Join, Aggregation, Group By
 
 Day 7: Leetcode - Top SQL 50 [Confirmation-rate-for-each-user](https://www.linkedin.com/posts/mythilyramanathan_day7-activity-7145397869401817088-bDMg?utm_source=share&utm_medium=member_desktop)
--Embarked on a SQL adventure, solving a query in four distinct ways, each unveiling a step towards simplicity.
-    -Approach 1: Right join to embrace all users. Confirmed counts via CASE WHEN, stored in a CTE. Divided counts, rounding to 2 decimals. COALESCE for NULLs.
-    -Approach 2: Streamlined by ditching the CTE. Right join retained for inclusivity. SUM with CASE WHEN for confirmed count. Divided results, rounded to 2 decimals. COALESCE for NULLs.
-    -Approach 3: Trimmed further, ditching CASE WHEN for 2 outcomes. SUM with IF for the confirmed count. Divided counts, rounded to 2 decimals. COALESCE for NULLs. Right join retained.
-    -Approach 4: Ultimate simplification. AVG with IF for confirmation_rate. Rounded to 2 decimals. COALESCE for NULLs. Right join persisted for universality.
--Evolved from complexity to clarity, embracing simplicity without compromise.
+
+- Embarked on a SQL adventure, solving a query in four distinct ways, each unveiling a step towards simplicity.
+    - Approach 1: Right join to embrace all users. Confirmed counts via CASE WHEN, stored in a CTE. Divided counts, rounding to 2 decimals. COALESCE for NULLs.
+    - Approach 2: Streamlined by ditching the CTE. Right join retained for inclusivity. SUM with CASE WHEN for confirmed count. Divided results, rounded to 2 decimals. COALESCE for NULLs.
+    - Approach 3: Trimmed further, ditching CASE WHEN for 2 outcomes. SUM with IF for the confirmed count. Divided counts, rounded to 2 decimals. COALESCE for NULLs. Right join retained.
+    - Approach 4: Ultimate simplification. AVG with IF for confirmation_rate. Rounded to 2 decimals. COALESCE for NULLs. Right join persisted for universality.
+- Evolved from complexity to clarity, embracing simplicity without compromise.
 
 
 Day 8: Leetcode - Top SQL 50 [percentage of immediate joiners](https://www.linkedin.com/posts/mythilyramanathan_day-8-activity-7148857823202869249-MMN-?utm_source=share&utm_medium=member_desktop)
-
+- Aggregate - sum, min, count, distinct, sub-query
 
 Day 9:LearnSQL - [Basic SQL Practice: Run Track Through Queries!]()
 
