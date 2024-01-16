@@ -124,5 +124,20 @@ JOIN  Subjects SU
 LEFT JOIN Examinations E
     ON ST.student_id= e.student_id AND SU.subject_name= E.subject_name
 
+--Day 10 - 1174. https://leetcode.com/problems/immediate-food-delivery-ii/?envType=study-plan-v2&envId=top-sql-50
+-- Write a solution to find the percentage of immediate orders in the first orders of all customers, rounded to 2 decimal places.    
+    SELECT 
+    ROUND(SUM(CASE WHEN 
+          order_date = customer_pref_delivery_date 
+          THEN 1 ELSE 0 END) 
+   * 100.0  
+   / COUNT(DISTINCT customer_id), 2) AS immediate_percentage
+FROM Delivery
+WHERE (customer_id, order_date) IN 
+	(SELECT 
+     customer_id, MIN(order_date) AS first_order_date
+    FROM Delivery
+    GROUP BY customer_id)
+
 GROUP BY ST.student_id,SU.subject_name
 ORDER BY ST.student_id,SU.subject_name
