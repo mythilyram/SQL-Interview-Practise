@@ -1,0 +1,43 @@
+Here are ten common SQL interview questions related to NULL values, along with their answers:
+
+1. What is NULL in SQL?
+  Answer: NULL represents the absence of a value in a field. It is not the same as an empty string or zero; it is an unknown or undefined value.
+
+2. How to check for NULL values in a column?
+  Answer: Use the `IS NULL` or `IS NOT NULL` condition in the WHERE clause.
+
+   SELECT * FROM tableName WHERE columnName IS NULL;
+
+3. What is the difference between NULL and an empty string?
+  Answer: NULL represents the absence of a value, while an empty string is a valid string with zero length.
+
+4. How to replace NULL values with a specific value in a query result?
+  Answer: Use the `COALESCE` function.
+
+   SELECT COALESCE(columnName, 'ReplacementValue') AS columnName FROM tableName;
+
+5. Explain the behavior of the NULL value in aggregate functions.
+  Answer: If an aggregate function encounters a NULL value, it generally ignores it, except for the `COUNT(*)` function, which counts all rows, including those with NULL values.
+
+6. Can a table have multiple NULL values in a unique key column?
+  Answer: Yes, a table can have multiple NULL values in columns that are part of a unique key or index. NULL is not considered equal to NULL in this context.
+
+7. How to insert a NULL value into a column during data insertion?
+  Answer: Simply omit the column from the INSERT statement or explicitly use the keyword NULL.
+
+   INSERT INTO tableName (column1, column2) VALUES (value1, NULL);
+
+8. Explain the use of the `ISNULL` function.
+  - Answer: The `ISNULL` function returns the specified replacement value if the expression is NULL; otherwise, it returns the expression itself.
+
+   SELECT ISNULL(columnName, 'ReplacementValue') AS columnName FROM tableName;
+
+9. How to count the number of NULL values in a column?
+  Answer: Use the `COUNT` function with a CASE statement.
+
+   SELECT COUNT(CASE WHEN columnName IS NULL THEN 1 END) AS NullCount FROM tableName;
+
+10. Can NULL values be indexed in SQL Server?
+  Answer: Yes, NULL values can be indexed. However, keep in mind that querying for NULL values might be less efficient than querying for non-NULL values due to the way indexes work.
+
+Remember, the key to success in SQL interviews is not just memorizing answers but understanding the underlying concepts. These questions cover a range of scenarios involving NULL values in SQL Server.
